@@ -3,8 +3,8 @@
   "scripts": {
     "lint": "eslint 'src/**/*.{js,ts}'",
     "build": "npm run lint && tsc",
-    "serve": "npm run build && firebase serve --only functions",
-    "shell": "npm run build && firebase functions:shell",
+    "serve": "npm run build && GOOGLE_APPLICATION_CREDENTIALS=./src/ts-react-firebase-firebase-adminsdk-1h6ss-73e0272ce3.json firebase serve --only functions",
+    "shell": "npm run build && GOOGLE_APPLICATION_CREDENTIALS=./src/ts-react-firebase-firebase-adminsdk-1h6ss-73e0272ce3.json firebase functions:shell",
     "start": "npm run shell",
     "test": "jest",
     "deploy": "firebase deploy --only functions",
@@ -21,16 +21,24 @@
   "dependencies": {
     "commander": "^3.0.1",
     "csv-parse": "^4.4.6",
+    "date-fns": "^2.2.1",
+    "date-fns-timezone": "^0.1.4",
     "firebase": "^6.6.2",
     "firebase-admin": "^8.0.0",
-    "firebase-functions": "^3.1.0"
+    "firebase-functions": "^3.1.0",
+    "lodash": "^4.17.15",
+    "node-fetch": "^2.6.0",
+    "puppeteer": "^1.20.0"
   },
   "devDependencies": {
     "@types/eslint": "^6.1.1",
     "@types/eslint-plugin-prettier": "^2.2.0",
     "@types/jest": "^24.0.18",
+    "@types/lodash": "^4.14.138",
     "@types/node": "^12.7.5",
+    "@types/node-fetch": "^2.5.1",
     "@types/prettier": "^1.18.2",
+    "@types/puppeteer": "^1.19.1",
     "@typescript-eslint/eslint-plugin": "^2.3.0",
     "@typescript-eslint/parser": "^2.3.0",
     "eslint": "^6.4.0",

@@ -11,4 +11,4 @@ node_modules/
 *firebase-adminsdk*.json
 
 # Firebase environment variables file
-.runtimeconfig.jso
+.runtimeconfig.json
