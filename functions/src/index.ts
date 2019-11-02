@@ -13,11 +13,10 @@ const functionMap = {
 
 const devFunctionMap = {
   publishers: './publishers',
+  searchBooks: './search-books',
 };
 
 const loadFunctions = (fnMap: typeof functionMap) => {
-  console.log(process.env.FUNCTION_TARGET, '------------------------');
-  console.log(!process.env.FUNCTION_TARGET);
   forEach(fnMap, (path, functionName) => {
     if (
       !process.env.FUNCTION_TARGET ||
